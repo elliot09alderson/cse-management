@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities{
+    .center-row {
+       @apply flex items-center justify-center      
+      }
+    .center-col{
+       @apply flex flex-col gap-4 items-center justify-center 
+
+      } 
+}
