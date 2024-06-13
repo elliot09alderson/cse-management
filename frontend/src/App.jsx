@@ -3,8 +3,11 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import AdminLogin from "./pages/Admin/AdminLogin";
 import UserLogin from "./pages/User/UserLogin";
 import NotFoud from "./pages/404/NotFoud";
-import Home from "./pages/Home/Home";
 
+import "./App.css";
+import Home from "./pages/Home/Home";
+import { DarkThemeToggle, Flowbite } from "flowbite-react";
+import UserSignup from "./pages/User/UserSignup";
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -12,7 +15,11 @@ const App = () => {
       element: <Home />,
     },
     {
-      path: "/user",
+      path: "/user/signup",
+      element: <UserSignup />,
+    },
+    {
+      path: "/user/login",
       element: <UserLogin />,
     },
     {
@@ -27,7 +34,10 @@ const App = () => {
 
   return (
     <div>
+      {/* <Flowbite> */}
+      {/* <DarkThemeToggle /> */}
       <RouterProvider router={router} />
+      {/* </Flowbite> */}
     </div>
   );
 };
